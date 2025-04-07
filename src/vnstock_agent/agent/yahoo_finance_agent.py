@@ -9,6 +9,7 @@ from pyrate_limiter import Duration, RequestRate, Limiter
 from requests import Session
 from requests_cache import CacheMixin, SQLiteCache
 from requests_ratelimiter import LimiterMixin, MemoryQueueBucket
+
 import yfinance as yf
 
 logger = logging.getLogger(__name__)
@@ -361,19 +362,3 @@ class YahooFinanceAgent:
         except Exception as e:
             logger.error(f"Error in get_filtered_options: {str(e)}", exc_info=True)
             return None, f"Failed to retrieve options data: {str(e)}"
-
-# Example usage
-if __name__ == "__main__":
-    # Configure logging
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    
-    # Create Yahoo Finance agent
-    agent = YahooFinanceAgent()
-    
-    # Example: Get ticker info
-    ticker_info = agent.get_ticker_info("AAPL")
-    print(f"Ticker info: {ticker_info}")
-    
-    # Example: Get price history
-    price_history = agent.get_price_history("AAPL", period="1mo")
-    print(f"Price history: {price_history}")

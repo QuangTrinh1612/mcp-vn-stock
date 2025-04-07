@@ -249,7 +249,6 @@ name = "mcp-vn-stock"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "httpx" },
     { name = "mcp", extra = ["cli"] },
     { name = "pandas" },
     { name = "pyrate-limiter" },
@@ -261,13 +260,12 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "httpx", specifier = ">=0.28.1" },
     { name = "mcp", extras = ["cli"], specifier = ">=1.6.0" },
     { name = "pandas", specifier = ">=2.2.3" },
-    { name = "pyrate-limiter", specifier = ">=3.7.0" },
+    { name = "pyrate-limiter", specifier = ">=2.10.0" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "requests-cache", specifier = ">=1.2.1" },
-    { name = "requests-ratelimiter", specifier = ">=0.4.0" },
+    { name = "requests-ratelimiter", specifier = ">=0.7.0" },
     { name = "yfinance", specifier = ">=0.2.55" },
 ]
 
@@ -497,11 +495,11 @@ wheels = [
 
 [[package]]
 name = "pyrate-limiter"
-version = "3.7.0"
+version = "2.10.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/3e/b6/a812da6cbcb3861c4389fc42114a77d3628d2a9948fbc5f308c35fecaed0/pyrate_limiter-3.7.0.tar.gz", hash = "sha256:dc1e6d2c80b559f3333cb44bd822bd558f5a47946dc50cce4263a9c1c5fd8067", size = 281878 }
+sdist = { url = "https://files.pythonhosted.org/packages/c0/a2/bb73c385e6d68cbe0ebe6ff16c22c96a79194c1298b2942005fcaf3eda9d/pyrate_limiter-2.10.0.tar.gz", hash = "sha256:98cc52cdbe058458e945ae87d4fd5a73186497ffa545ee6e98372f8599a5bd34", size = 49915 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/92/1b/c6154663593ffecb18e9463be7a1190bcf37fe360d0fce4153771472ee6e/pyrate_limiter-3.7.0-py3-none-any.whl", hash = "sha256:cdbfc8f537d07e2bda76f5191b38aee972b26e1af020d880e3c1ef9d528227ac", size = 28286 },
+    { url = "https://files.pythonhosted.org/packages/4f/2e/cad6d72ca044bff3b0d53b491f5116582e0704fea59672906d44b9600514/pyrate_limiter-2.10.0-py3-none-any.whl", hash = "sha256:a99e52159f5ed5eb58118bed8c645e30818e7c0e0d127a0585c8277c776b0f7f", size = 16376 },
 ]
 
 [[package]]
@@ -568,15 +566,15 @@ wheels = [
 
 [[package]]
 name = "requests-ratelimiter"
-version = "0.4.0"
+version = "0.7.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pyrate-limiter" },
     { name = "requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/31/32/d6f24271f0791a72a1e96a67399733d37b7c5e0a14e2cf9544c0c85ca685/requests-ratelimiter-0.4.0.tar.gz", hash = "sha256:4fcd71bd75488409329bb4e7baad8df98efec2c3a5d34ad4388d84cd35eeda8d", size = 13165 }
+sdist = { url = "https://files.pythonhosted.org/packages/0a/9b/06ef6289f3b774593354286b2d032ca7df30e28a5aeb9423c97bcd13c676/requests_ratelimiter-0.7.0.tar.gz", hash = "sha256:a070c8a359a6f3a001b0ccb08f17228b7ae0a6e21d8df5b6f6bd58389cddde45", size = 14200 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/8c/dc/c2dcd9b5a7050085ecbfd25bca4dd0687a285e2e1649d2c3a179a6291ab7/requests_ratelimiter-0.4.0-py3-none-any.whl", hash = "sha256:4c41dc0bb5a58ef668283a0512d55d075bc4b82487d1765382512bdbec37c6a5", size = 8568 },
+    { url = "https://files.pythonhosted.org/packages/ae/81/2d9e20bfc065fe083494e656c1c396a33303d10d1ccfc11efe886ba51458/requests_ratelimiter-0.7.0-py3-none-any.whl", hash = "sha256:1a7ef2faaa790272722db8539728690046237766fcc479f85b9591e5356a8185", size = 9314 },
 ]
 
 [[package]]
